@@ -9,16 +9,15 @@
 #  generate the average of the dice
 #  display a summary of what was rolled, and what the result was
 # Tell the user we have started processing
-echo "Rolling..."
+echo "Rolling the dies to get their sum and average"
 sides=6
 bias=1
-RANDOM=$RANDOM
 # roll the dice and save the results
-die1=$(( RANDOM % sides + bias))
-die2=$(( RANDOM % sides + bias))
+rollingdie1=$(( RANDOM % sides + bias))
+rollingdie2=$(( RANDOM % sides + bias))
 # sum up the rolls
-sum=$(( die1 + die2 ))
+sum=$(( rollingdie1 + rollingdie2 ))
 average=$((sum / 2 ))
-# display the results
-echo "Rolled $die1, $die2 for a $sum"
-echo "Rolled $die1, $die2 and an average is $average"
+# displaying the summary of what was rolled
+echo "Rolled $rollingdie1, $rollingdie2 for a $sum"
+echo "Rolled $rollingdie1, $rollingdie2 and an average is $average"
