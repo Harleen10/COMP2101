@@ -4,16 +4,16 @@
 # it should look like
 #   Welcome to planet hostname, title name!
 # Improve this script by using the value in the automatic variable $USER for the name
+name="$USER"
 # Improve this script by adding some time and day of the week information to the welcome message
 #   Use a format like this:
 #   It is HH:MM AM on weekday.
+date=$(date +'%I:%M %p')
+weekday=$(date +%u)
 ###############
 # Variables   #
 ###############
 title="Overlord"
-name="$USER"
-date=$(date +'%I:%M %p')
-weekday=$(date +%u)
 hostname=$(hostname)
 ###############
 # Main        #
