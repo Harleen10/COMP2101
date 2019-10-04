@@ -7,12 +7,12 @@ sides=6
 bias=1
 #     - you can think of this as the minimum value for the generated number
 #  roll the dice using the variables for the range and bias i.e. RANDOM % range + bias
-rollingdie1=$(( RANDOM % sides + bias))
-rollingdie2=$(( RANDOM % sides + bias))
+rollingdie1=$(( RANDOM % $sides + $bias))
+rollingdie2=$(( RANDOM % $sides + $bias))
 #  generate the sum of the dice
-sum=$(( rollingdie1 + rollingdie2 ))
+sum=$(( $rollingdie1 + $rollingdie2 ))
 #  generate the average of the dice
-average=$((sum / 2 ))
+average=$(($sum / 2 ))
 #  display a summary of what was rolled, and what the result was
 # Tell the user we have started processing
 echo "Rolling the dies to get their sum and average"
